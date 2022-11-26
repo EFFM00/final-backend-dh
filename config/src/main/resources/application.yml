@@ -8,6 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/EFFM00/config-server
+          uri: https://github.com/EFFM00/final-backend-dh
           default-label: main
           force-pull: true
+          search-paths: config-data
