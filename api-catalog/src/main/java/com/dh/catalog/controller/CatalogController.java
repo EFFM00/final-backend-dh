@@ -3,6 +3,7 @@ package com.dh.catalog.controller;
 import com.dh.catalog.client.MovieServiceClient;
 import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ public class CatalogController {
 	}
 
 	@CircuitBreaker(name="subscriptionMovie", fallbackMethod = "subscriptionFallbackMethod")
+	@Retry(name = "subscriptionMovie")
 	@GetMapping("/{genre}")
 	ResponseEntity<List<MovieServiceClient.MovieDto>> getGenre(@PathVariable String genre) {
 		return ResponseEntity.ok(movieServiceClient.getMovieByGenre(genre));
