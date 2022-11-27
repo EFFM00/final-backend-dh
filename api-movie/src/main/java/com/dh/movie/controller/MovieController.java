@@ -28,3 +28,4 @@ public class MovieController {
         return ResponseEntity.ok().body(movieService.save(movie));
     }
 }
+

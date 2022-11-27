@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="api-series" />
         <module name="api-catalog" />
         <module name="api-movie" />
         <module name="config" />
@@ -18,6 +19,7 @@
       <module name="api-catalog" target="17" />
       <module name="api-gateway" target="17" />
       <module name="api-movie" target="17" />
+      <module name="api-series" target="17" />
       <module name="config" target="17" />
       <module name="eureka-server" target="17" />
     </bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="api-catalog" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="api-movie" options="-parameters" />
+      <module name="api-series" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
     </option>
